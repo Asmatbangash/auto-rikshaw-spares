@@ -5,10 +5,10 @@ import { CiSearch } from "react-icons/ci";
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-sm px-10">
+    <div className="navbar bg-base-100 shadow-sm px-15 max-sm:px-0">
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl">
-          <img src={assets.logo} alt="Logo" className="w-[60px]" />
+        <a className="">
+          <img src={assets.logo} alt="Logo" className="w-15" />
         </a>
       </div>
       <div className="navbar-center w-60">
