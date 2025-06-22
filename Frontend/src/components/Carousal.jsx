@@ -14,7 +14,7 @@ function Carousal({ settings, spareParts }) {
       <Slider {...settings}>
         {spareParts.map((sparePart) => (
           <div className="w-full h-full">
-            <img src={sparePart.image} className="w-full h-90" />
+            <img src={sparePart.image} className="w-full h-90 rounded-lg" />
           </div>
         ))}
       </Slider>

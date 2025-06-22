@@ -19,7 +19,7 @@ function Spares() {
 
   return (
     <div className="py-10 px-4 bg-bases-100">
-      <h2 className="text-3xl font-bold text-center text-green-700 mb-8">
+      <h2 className="text-3xl font-bold text-center mb-8">
         Auto Rickshaw Spare Parts
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
