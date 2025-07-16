@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousal, Spares } from "../components";
+import { BestSellerProducts, Carousal, Spares } from "../components";
 import { assets } from "../assets/assets";
 
 function Home() {
@@ -20,6 +20,7 @@ function Home() {
     <div>
       <Carousal settings={settings} spareParts={spareParts} />
       <Spares />
+      <BestSellerProducts />
     </div>
   );
 }
