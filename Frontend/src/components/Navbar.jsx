@@ -1,10 +1,9 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import Input from "./Input";
 import { CiSearch } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
 import { PiShoppingCartLight } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const navigation = [
@@ -15,6 +14,7 @@ function Navbar() {
   ];
   return (
     <div className="navbar bg-base-100 shadow-sm pl-10 pr-15 max-sm:pl-0 max-sm:pr-0">
+      {/* Mobile menu */}
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,13 +34,20 @@ function Navbar() {
               />{" "}
             </svg>
           </div>
+
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="flex flex-col gap-1 justify-center items-center dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {navigation.map((navigateTo) => (
               <li key={navigateTo.name}>
-                <Link to={navigateTo.href}>{navigateTo.name}</Link>
+                <NavLink
+                  to={navigateTo.href}
+                  className="flex items-center flex-col gap-1"
+                >
+                  {navigateTo.name}{" "}
+                  <hr className="w-2/4 border-none h-[1.5px] bg-gray-950 hidden" />
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -49,11 +56,18 @@ function Navbar() {
           <img src={assets.logo} alt="logo" className="w-15" />
         </Link>
       </div>
+      {/* Desktop menu */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="flex justify-center items-center px-1">
           {navigation.map((navigateTo) => (
             <li key={navigateTo.name}>
-              <Link to={navigateTo.href}>{navigateTo.name}</Link>
+              <NavLink
+                to={navigateTo.href}
+                className="flex items-center flex-col mx-2"
+              >
+                {navigateTo.name}{" "}
+                <hr className="w-2/4 border-none h-[1.5px] bg-gray-950 hidden" />
+              </NavLink>
             </li>
           ))}
         </ul>

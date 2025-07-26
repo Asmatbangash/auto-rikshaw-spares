@@ -17,3 +17,9 @@
 .slick-prev {
   left: 0% !important;
 }
+
+a.active hr{
+  display: block;
+}
+
+

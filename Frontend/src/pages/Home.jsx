@@ -64,7 +64,7 @@ function Home() {
         </div>
       </div>
       <BestSellerProducts />
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center max-sm:flex-wrap">
         <CardsData
           data={somePolicy}
           className="px-4 py-4 my-4 mx-10 rounded-lg text-center"
