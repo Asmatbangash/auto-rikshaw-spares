@@ -1,5 +1,5 @@
 import React from "react";
-import { BestSellerProducts, Carousal, CardsData } from "../components";
+import { Carousal, CardsData, BigCard } from "../components";
 import { assets } from "../assets/assets";
 
 function Home() {
@@ -49,6 +49,13 @@ function Home() {
       image: assets.support,
     },
   ];
+
+  const BestSellerProducts = [
+    { image: assets.pistonKit, desc: "lajsdlfjalsjdf", price: "$69" },
+    { image: assets.cylinder, desc: "aljsldfjals", price: "$69" },
+    { image: assets.Silencer, desc: "ajsdlfjas", price: "$69" },
+    { image: assets.RealAxle, desc: "laksjdfalsjdlfjalsdf", price: "$69" },
+  ];
   return (
     <div>
       <Carousal settings={settings} sparePartsBanner={sparePartsBanner} />
@@ -63,7 +70,7 @@ function Home() {
           />
         </div>
       </div>
-      <BestSellerProducts />
+      <BigCard product={BestSellerProducts} />
       <div className="flex justify-center items-center max-sm:flex-wrap">
         <CardsData
           data={somePolicy}

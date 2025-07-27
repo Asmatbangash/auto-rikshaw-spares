@@ -3,6 +3,7 @@ import Input from "./Input";
 import Carousal from "./Carousal";
 import CardsData from "./CardsData";
 import Footer from "./Footer";
-import BestSellerProducts from "./BestSellerProducts";
+import BigCard from "./BigCard";
+import SearchBar from "./SearchBar";
 
-export { Navbar, Input, Carousal, CardsData, Footer, BestSellerProducts };
+export { Navbar, Input, Carousal, CardsData, Footer, BigCard, SearchBar };
