@@ -56,7 +56,7 @@ function Navbar() {
 
             <ul
               tabIndex={0}
-              className="flex flex-col gap-1 justify-center items-center dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="flex flex-col gap-1 justify-center items-center dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52  shadow"
             >
               {navigation.map((navigateTo) => (
                 <li key={navigateTo.name}>
@@ -77,12 +77,12 @@ function Navbar() {
         </div>
         {/* Desktop menu */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex justify-center items-center px-1">
+          <ul className="flex justify-center items-center">
             {navigation.map((navigateTo) => (
               <li key={navigateTo.name}>
                 <NavLink
                   to={navigateTo.href}
-                  className="flex items-center flex-col px-2"
+                  className="flex items-center flex-col px-3"
                 >
                   {navigateTo.name}{" "}
                   <hr className="w-2/4 border-none h-[1.5px] bg-gray-950 hidden" />

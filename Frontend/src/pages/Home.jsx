@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousal, CardsData, BigCard } from "../components";
+import { Carousal, CardsData, BigCard, Title, Line } from "../components";
 import { assets } from "../assets/assets";
 
 function Home() {
@@ -59,10 +59,11 @@ function Home() {
   return (
     <div>
       <Carousal settings={settings} sparePartsBanner={sparePartsBanner} />
-      <div className="py-10 px-4 bg-bases-100">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Auto Rickshaw Spare Parts
-        </h2>
+      <div className="py-10 px-4 bg-bases-100 text-center text-3xl">
+        <div className="inline-flex gap-1 items-center mb-5">
+          <Line className="w-8 sm:w-12 h-[2px] sm:h-[3px] text-gray-700" />
+          <Title text1="AUTO RICKSHAW" text2="SPAREPARTS" />
+        </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
           <CardsData
             data={spareParts}
@@ -70,7 +71,13 @@ function Home() {
           />
         </div>
       </div>
-      <BigCard product={BestSellerProducts} />
+      <div className="text-center text-3xl">
+        <div className="inline-flex items-center gap-1 mb-5">
+          <Title text1="BEST SELER " text2="PRODUCTS" />
+          <Line className="w-8 sm:w-12 h-[2px] sm:h-[3px] text-gray-700" />
+        </div>
+        <BigCard product={BestSellerProducts} />
+      </div>
       <div className="flex justify-center items-center max-sm:flex-wrap">
         <CardsData
           data={somePolicy}

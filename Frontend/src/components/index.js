@@ -5,5 +5,16 @@ import CardsData from "./CardsData";
 import Footer from "./Footer";
 import BigCard from "./BigCard";
 import SearchBar from "./SearchBar";
-
-export { Navbar, Input, Carousal, CardsData, Footer, BigCard, SearchBar };
+import Title from "./Title";
+import Line from "./Line";
+export {
+  Navbar,
+  Input,
+  Carousal,
+  CardsData,
+  Footer,
+  BigCard,
+  SearchBar,
+  Title,
+  Line,
+};
