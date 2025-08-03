@@ -1,28 +1,27 @@
 import React from "react";
-import { assets } from "../assets/assets";
 
 function BestSellerProducts({ product }) {
   return (
-    <div className="mb-10">
-      <div className="flex justify-center items-center flex-wrap">
-        {product.map((products) => (
-          <div className="card bg-white w-60 shadow-sm mx-2 my-4">
-            <figure>
-              <img
-                src={products.image}
-                className="w-full h-40"
-                alt="best seller product"
-              />
-            </figure>
-            <div className="card-body">
-              <p>{products.desc}</p>
-              <div className="card-actions justify-start">
-                <p>{products.price}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {product.map((item, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col items-center text-center"
+        >
+          <img
+            src={item.image}
+            alt={item.desc}
+            className="w-32 h-32 object-contain mb-4"
+          />
+          <p
+            className="mb-2"
+            dangerouslySetInnerHTML={{ __html: item.desc }}
+          ></p>
+          <span className="text-indigo-600 font-semibold text-lg">
+            {item.price}
+          </span>
+        </div>
+      ))}
     </div>
   );
 }

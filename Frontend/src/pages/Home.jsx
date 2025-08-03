@@ -51,11 +51,28 @@ function Home() {
   ];
 
   const BestSellerProducts = [
-    { image: assets.pistonKit, desc: "lajsdlfjalsjdf", price: "$69" },
-    { image: assets.cylinder, desc: "aljsldfjals", price: "$69" },
-    { image: assets.Silencer, desc: "ajsdlfjas", price: "$69" },
-    { image: assets.RealAxle, desc: "laksjdfalsjdlfjalsdf", price: "$69" },
+    {
+      image: assets.pistonKit,
+      desc: "Durable piston kit for optimal engine performance.",
+      price: "$69",
+    },
+    {
+      image: assets.cylinder,
+      desc: "Reliable cylinder block for consistent compression.",
+      price: "$69",
+    },
+    {
+      image: assets.Silencer,
+      desc: "Noise-reducing silencer for smoother exhaust flow.",
+      price: "$69",
+    },
+    {
+      image: assets.RealAxle,
+      desc: "Heavy-duty rear axle built for daily use.",
+      price: "$69",
+    },
   ];
+
   return (
     <div>
       <Carousal settings={settings} sparePartsBanner={sparePartsBanner} />
@@ -71,8 +88,8 @@ function Home() {
           />
         </div>
       </div>
-      <div className="text-center text-3xl">
-        <div className="inline-flex items-center gap-1 mb-5">
+      <div className="text-center mx-12 mb-6">
+        <div className="inline-flex items-center text-3xl gap-1 mb-5">
           <Title text1="BEST SELER " text2="PRODUCTS" />
           <Line className="w-8 sm:w-12 h-[2px] sm:h-[3px] text-gray-700" />
         </div>

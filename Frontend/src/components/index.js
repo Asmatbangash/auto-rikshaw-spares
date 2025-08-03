@@ -7,6 +7,7 @@ import BigCard from "./BigCard";
 import SearchBar from "./SearchBar";
 import Title from "./Title";
 import Line from "./Line";
+import Checkbox from "./Checkbox";
 export {
   Navbar,
   Input,
@@ -17,4 +18,5 @@ export {
   SearchBar,
   Title,
   Line,
+  Checkbox,
 };

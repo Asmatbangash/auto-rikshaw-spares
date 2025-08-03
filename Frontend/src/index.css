@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
+/* #root{
+  background-color: #F3F4F6;
+} */
+
 .slick-next,
 .slick-prev {
   background-color: gray !important;

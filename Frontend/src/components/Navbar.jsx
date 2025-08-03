@@ -11,8 +11,8 @@ function Navbar() {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Collection", href: "/collection" },
     { name: "About", href: "/about" },
+    { name: "Collection", href: "/collection" },
     { name: "Contact", href: "/contact" },
   ];
 

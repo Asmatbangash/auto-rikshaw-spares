@@ -1,26 +1,69 @@
 import React from "react";
-import { BigCard, Line, Title } from "../components/index";
+import { BigCard, Checkbox, Line, Title } from "../components/index";
 import { assets } from "../assets/assets";
+
 function Collection() {
   const collections = [
-    { image: assets.pistonKit, desc: "lajsdlfjalsjdf", price: "$69" },
-    { image: assets.cylinder, desc: "aljsldfjals", price: "$69" },
-    { image: assets.Silencer, desc: "ajsdlfjas", price: "$69" },
-    { image: assets.RealAxle, desc: "laksjdfalsjdlfjalsdf", price: "$69" },
-    { image: assets.pistonKit, desc: "lajsdlfjalsjdf", price: "$69" },
-    { image: assets.cylinder, desc: "aljsldfjals", price: "$69" },
-    { image: assets.Silencer, desc: "ajsdlfjas", price: "$69" },
-    { image: assets.RealAxle, desc: "laksjdfalsjdlfjalsdf", price: "$69" },
+    { image: assets.pistonKit, desc: "High-quality piston kit", price: "$69" },
+    {
+      image: assets.cylinder,
+      desc: "Durable cylinder for engines",
+      price: "$79",
+    },
+    { image: assets.Silencer, desc: "Noise-reducing silencer", price: "$59" },
+    { image: assets.RealAxle, desc: "Robust rear axle", price: "$89" },
+    { image: assets.pistonKit, desc: "Reliable piston kit", price: "$69" },
+    {
+      image: assets.cylinder,
+      desc: "Engine cylinder with precision fit",
+      price: "$79",
+    },
+    { image: assets.Silencer, desc: "Performance silencer", price: "$59" },
+    { image: assets.RealAxle, desc: "Heavy-duty real axle", price: "$89" },
+    { image: assets.Silencer, desc: "Noise-reducing silencer", price: "$59" },
+    { image: assets.RealAxle, desc: "Robust rear axle", price: "$89" },
+    { image: assets.pistonKit, desc: "Reliable piston kit", price: "$69" },
+    {
+      image: assets.cylinder,
+      desc: "Engine cylinder with precision fit",
+      price: "$79",
+    },
   ];
+
+  const nameOfProduct = [
+    { name: "Clutch Plate" },
+    { name: "Piston Kit" },
+    { name: "Cylinder" },
+    { name: "Silencer" },
+    { name: "Rear Axle" },
+    { name: "Brake Shoe" },
+    { name: "Spark Plug" },
+    { name: "Headlight" },
+    { name: "Tail Light" },
+    { name: "Air Filter" },
+    { name: "Battery" },
+    { name: "Speedometer" },
+  ];
+
   return (
-    <div>
-      <div></div>
-      <div className="text-3xl text-center my-5">
-        <div className="inline-flex items-center gap-1 mb-5">
-          <Title text1={"ALL"} text2={"PRODUCTS"} />
-          <Line className="w-8 sm:w-12 h-[2px] sm:h-[3px] text-gray-700" />
+    <div className="min-h-screen py-10 px-4 md:px-10 lg:px-16">
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Filter Section */}
+        <div className="lg:w-1/4 bg-white rounded-2xl shadow-md p-6">
+          <Title text2="Filter Products" />
+          <div className="mt-4">
+            <Checkbox product={nameOfProduct} />
+          </div>
         </div>
-        <BigCard product={collections} />
+
+        {/* Product Section */}
+        <div className="lg:w-3/4">
+          <div className="flex items-center gap-2 mb-6">
+            <Title text1="All" text2="Products" />
+            <Line className="w-10 sm:w-14 h-[3px] bg-indigo-600" />
+          </div>
+          <BigCard product={collections} />
+        </div>
       </div>
     </div>
   );
