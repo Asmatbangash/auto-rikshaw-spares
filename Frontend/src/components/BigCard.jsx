@@ -20,6 +20,9 @@ function BestSellerProducts({ product }) {
           <span className="text-indigo-600 font-semibold text-lg">
             {item.price}
           </span>
+          <button className="btn bg-black text-white w-full mt-4">
+            Add To Cart
+          </button>
         </div>
       ))}
     </div>

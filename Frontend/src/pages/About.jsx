@@ -5,9 +5,8 @@ function About() {
   return (
     <section className="min-h-screen bg-gradient-to-br py-16 px-6 md:px-20">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
-        {/* Text Content */}
         <div className="w-full lg:w-1/2">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
             Quality Auto Rickshaw Spare Parts You Can Trust
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-4">
@@ -26,8 +25,6 @@ function About() {
             needs. Your satisfaction drives us forward.
           </p>
         </div>
-
-        {/* Image */}
         <div className="w-full lg:w-1/2">
           <img
             src={assets.Banner3}
