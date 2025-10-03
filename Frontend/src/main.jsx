@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { About, Collection, Contact, Home } from "./pages";
+import { About, CartPage, Collection, Contact, Home } from "./pages";
 
 // Define the router with proper route object
 const router = createBrowserRouter([
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/cartPage",
+        element: <CartPage />,
       },
     ],
   },

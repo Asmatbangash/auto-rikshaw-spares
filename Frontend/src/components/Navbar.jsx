@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { CiSearch } from "react-icons/ci";
 import { FiUser } from "react-icons/fi";
 import { PiShoppingCartLight } from "react-icons/pi";
-import { href, Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { SearchBar } from "./index";
+import { AddToCartContext } from "../store/AddToCart";
 
 function Navbar() {
+  const { cartCounter } = useContext(AddToCartContext);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
 
   const navigation = [
@@ -119,12 +121,12 @@ function Navbar() {
               ))}
             </ul>
           </div>
-          <div className="px-2">
+          <Link to="/cartPage" className="px-2">
             <button className="btn">
               <PiShoppingCartLight />
-              <div className="badge badge-sm">9</div>
+              <div className="badge badge-sm">{cartCounter}</div>
             </button>
-          </div>
+          </Link>
         </div>
       </div>
       {isSearchVisible ? <SearchBar /> : null}

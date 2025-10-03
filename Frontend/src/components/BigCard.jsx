@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AddToCartContext } from "../store/AddToCart";
 
 function BestSellerProducts({ product }) {
+  const { setAddToCart, setCartCounter } = useContext(AddToCartContext);
+
+  const handleAddToCartClick = (item) => {
+    setAddToCart((prevCart) => [...prevCart, item]);
+    setCartCounter((prevCounter) => prevCounter + 1);
+  };
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
       {product.map((item, index) => (
@@ -29,11 +36,12 @@ function BestSellerProducts({ product }) {
           </span>
 
           {/* Add to Cart Button (always at bottom) */}
-          <div className="mt-auto">
-            <button className="w-full py-2 rounded-lg bg-black text-white font-semibold shadow-md hover:bg-gray-900 hover:shadow-lg transition-all duration-300">
-              🛒 Add To Cart
-            </button>
-          </div>
+          <button
+            onClick={() => handleAddToCartClick(item)}
+            className="w-full py-2 rounded-lg bg-black text-white font-semibold shadow-md hover:bg-gray-900 hover:shadow-lg transition-all duration-300"
+          >
+            🛒 Add To Cart
+          </button>
         </div>
       ))}
     </div>
